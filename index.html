@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KS INNOVATIONS - Freelancer Marketplace</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" style="background: linear-gradient(135deg, #FF6B6B 0%, #4ECDC4 100%); color: white; padding: 1rem 0; position: fixed; width: 100%; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+        <div class="nav-container" style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 2rem;">
+            <div class="logo" style="font-size: 1.8rem; font-weight: 700; display: flex; align-items: center; gap: 10px;">
+                <i class="fas fa-rocket" style="font-size: 2rem;"></i>
+                <strong>KS INNOVATIONS</strong>
+            </div>
+            <ul class="nav-menu" style="display: flex; list-style: none; gap: 2rem;">
+                <li><a href="#home" style="color: white; text-decoration: none; font-weight: 500;">Home</a></li>
+                <li><a href="#freelancers" style="color: white; text-decoration: none; font-weight: 500;">Browse Freelancers</a></li>
+                <li><a href="#upload" style="color: white; text-decoration: none; font-weight: 500;">Upload Profile</a></li>
+                <li><a href="#services" style="color: white; text-decoration: none; font-weight: 500;">Services</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero - For Influencers -->
+    <section id="home" class="hero" style="background: linear-gradient(135deg, #FF6B6B 0%, #4ECDC4 100%); color: white; padding: 140px 0 80px; text-align: center;">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 0 2rem;">
+            <h1 style="font-size: 3.5rem; margin-bottom: 1.5rem; font-weight: 700;">Hire Top Freelancers</h1>
+            <p style="font-size: 1.3rem; margin-bottom: 2rem; opacity: 0.9;">Browse 100+ Video Editors, Designers & Writers. Hire instantly via WhatsApp</p>
+            <div style="max-width: 600px; margin: 0 auto 2rem; display: flex; background: rgba(255,255,255,0.2); border-radius: 50px; padding: 5px;">
+                <input type="text" placeholder="Search freelancers..." style="flex: 1; padding: 1rem 1.5rem; border: none; background: transparent; color: white; font-size: 1.1rem; outline: none;">
+                <a href="#freelancers" style="background: white; color: #FF6B6B; border: none; padding: 1rem 2rem; border-radius: 50px; cursor: pointer; font-weight: 600; text-decoration: none;">
+                    <i class="fas fa-search"></i> Browse Now
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Upload Profile Form - For Freelancers -->
+    <section id="upload" style="padding: 80px 0; background: #f8f9fa;">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 0 2rem;">
+            <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 3rem; color: #333;">📤 Freelancers: Upload Your Profile</h2>
+            <div style="max-width: 600px; margin: 0 auto; background: white; padding: 3rem; border-radius: 20px; box-shadow: 0 20px 60px rgba(0,0,0,0.1);">
+                <form id="freelancerForm">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 2rem;">
+                        <input type="text" placeholder="Full Name *" required style="padding: 1rem; border: 2px solid #eee; border-radius: 12px; font-size: 1rem;">
+                        <input type="tel" placeholder="WhatsApp Number *" required style="padding: 1rem; border: 2px solid #eee; border-radius: 12px; font-size: 1rem;">
+                    </div>
+                    <input type="text" placeholder="Skills (Video Editor, Designer, Writer)" required style="width: 100%; padding: 1rem; border: 2px solid #eee; border-radius: 12px; font-size: 1rem; margin-bottom: 1rem;">
+                    <select style="width: 100%; padding: 1rem; border: 2px solid #eee; border-radius: 12px; font-size: 1rem; margin-bottom: 1rem;">
+                        <option>Work Mode</option>
+                        <option>Remote (Work from Home)</option>
+                        <option>Office</option>
+                        <option>Both</option>
+                    </select>
+                    <textarea placeholder="Experience & Portfolio (2-3 sentences)" rows="4" required style="width: 100%; padding: 1rem; border: 2px solid #eee; border-radius: 12px; font-size: 1rem; margin-bottom: 2rem; resize: vertical;"></textarea>
+                    <button type="submit" style="width: 100%; background: linear-gradient(135deg, #FF6B6B, #4ECDC4); color: white; border: none; padding: 1.2rem; border-radius: 12px; font-size: 1.2rem; font-weight: 600; cursor: pointer;">
+                        🚀 Submit Profile - Get Hired!
+                    </button>
+                </form>
+                <div id="successMsg" style="display: none; margin-top: 1rem; padding: 1rem; background: #d4edda; color: #155724; border-radius: 12px; text-align: center;">
+                    ✅ Profile Submitted! Influencers will contact you on WhatsApp.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Browse Freelancers - For Influencers -->
+    <section id="freelancers" style="padding: 80px 0; background: white;">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 0 2rem;">
+            <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 1rem; color: #333;">👥 Browse Available Freelancers</h2>
+            <p style="text-align: center; color: #666; margin-bottom: 3rem; font-size: 1.2rem;">Contact directly via WhatsApp or Phone</p>
+            
+            <!-- Filters -->
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 3rem;">
+                <button class="filter-btn active" data-filter="all" style="padding: 0.8rem 1.5rem; border: 2px solid #eee; background: white; border-radius: 25px; cursor: pointer; font-weight: 500;">All</button>
+                <button class="filter-btn" data-filter="editor" style="padding: 0.8rem 1.5rem; border: 2px solid #eee; background: white; border-radius: 25px; cursor: pointer; font-weight: 500;">Editors</button>
+                <button class="filter-btn" data-filter="designer" style="padding: 0.8rem 1.5rem; border: 2px solid #eee; background: white; border-radius: 25px; cursor: pointer; font-weight: 500;">Designers</button>
+                <button class="filter-btn" data-filter="writer" style="padding: 0.8rem 1.5rem; border: 2px solid #eee; background: white; border-radius: 25px; cursor: pointer; font-weight: 500;">Writers</button>
+                <button class="filter-btn" data-filter="remote" style="padding: 0.8rem 1.5rem; border: 2px solid #eee; background: white; border-radius: 25px; cursor: pointer; font-weight: 500;">Remote</button>
+            </div>
+
+            <!-- Freelancers Grid -->
+            <div class="freelancers-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 2rem;">
+                
+                <!-- Shivanand - Featured -->
+                <div class="freelancer-card" data-category="editor designer writer" data-mode="remote" style="background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.1); border: 3px solid #FF6B6B;">
+                    <div style="height: 200px; background: linear-gradient(45deg, #FF6B6B, #4ECDC4); display: flex; align-items: center; justify-content: center; font-size: 4rem; color: white; position: relative;">
+                        <i class="fas fa-crown" style="font-size: 3rem;"></i>
+                        <div style="position: absolute; top: 10px; right: 10px; background: rgba(255,255,255,0.3); color: white; padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.8rem; font-weight: 600;">Featured</div>
+                        <div style="position: absolute; bottom: 10px; left: 10px; background: rgba(255,255,255,0.3); color: white; padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.8rem;">Remote</div>
+                    </div>
+                    <div style="padding: 2rem;">
+                        <h3 style="font-size: 1.5rem; font-weight: 600; margin-bottom: 0.5rem;">Shivanand</h3>
+                        <div style="color: #FF6B6B; font-weight: 600; font-size: 1.1rem; margin-bottom: 1rem;">Video Editor | Designer | Writer</div>
+                        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem;">
+                            <i class="fas fa-star" style="color: #ffd700;"></i>
+                            <i class="fas fa-star" style="color: #ffd700;"></i>
+                            <i class="fas fa-star" style="color: #ffd700;"></i>
+                            <i class="fas fa-star" style="color: #ffd700;"></i>
+                            <i class="fas fa-star" style="color: #ffd700;"></i>
+                            <span style="font-weight: 600;">5.0 (250+)</span>
+                        </div>
+                        <div style="color: #666; margin-bottom: 1.5rem; font-size: 0.95rem;">5+ years • KS INNOVATIONS</div>
+                        <div style="display: flex; gap: 1rem;">
+                            <a href="https://wa.me/919390309485?text=Hi%20Shivanand%2C%20I%20want%20to%20hire%20you!" style="flex: 1; padding: 1rem; background: #25D366; color: white; text-decoration: none; border-radius: 12px; display: flex; align-items: center; justify-content: center; gap: 0.5rem; font-weight: 600;" target="_blank">
+                                <i class="fab fa-whatsapp"></i> WhatsApp
+                            </a>
+                            <a href="tel:+919390309485" style="flex: 1; padding: 1rem; background: #FF6B6B; color: white; text-decoration: none; border-radius: 12px; display: flex; align-items: center; justify-content: center; gap: 0.5rem; font-weight: 600;">
+                                <i class="fas fa-phone"></i> Call
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sample Freelancers -->
+                <div class="freelancer-card" data-category="editor" data-mode="remote" style="background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.1);">
+                    <div style="height: 200px; background: linear-gradient(45deg, #667eea, #764ba2); display: flex; align-items: center; justify-content: center; font-size: 4rem; color: white; position: relative;">
+                        <i class="fas fa-user"></i>
+                        <div style="position: absolute; top: 10px; right: 10px; background: rgba(255,255,255,0.3); color: white; padding: 0.3rem 0.8rem; border-radius: 20px;">Remote</div>
+                    </div>
+                    <div style="padding: 2rem;">
+                        <h3>Rahul K</h3>
+                        <div style="color: #667eea; font-weight: 600;">Video Editor</div>
+                        <div style="margin-bottom: 1.5rem;">4.9 (89 reviews)</div>
+                        <div style="display: flex; gap: 1rem;">
+                            <a href="https://wa.me/919876543210" style="flex: 1; padding: 1rem; background: #25D366; color: white; text-decoration: none; border-radius: 12px; text-align: center;" target="_blank">WhatsApp</a>
+                            <a href="tel:+919876543210" style="flex: 1; padding: 1rem; background: #007bff; color: white; text-decoration: none; border-radius: 12px; text-align: center;">Call</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="freelancer-card" data-category="designer" data-mode="office" style="background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.1);">
+                    <div style="height: 200px; background: linear-gradient(45deg, #f093fb, #f5576c); display: flex; align-items: center; justify-content: center; font-size: 4rem; color: white; position: relative;">
+                        <i class="fas fa-user"></i>
+                        <div style="position: absolute; top: 10px; right: 10px; background: rgba(255,255,255,0.3); color: white; padding: 0.3rem 0.8rem; border-radius: 20px;">Office</div>
+                    </div>
+                    <div style="padding: 2rem;">
+                        <h3>Priya M</h3>
+                        <div style="color: #f093fb; font-weight: 600;">Graphic Designer</div>
+                        <div style="margin-bottom: 1.5rem;">4.8 (67 reviews)</div>
+                        <div style="display: flex; gap: 1rem;">
+                            <a href="https://wa.me/918765432109" style="flex: 1; padding: 1rem; background: #25D366; color: white; text-decoration: none; border-radius: 12px; text-align: center;" target="_blank">WhatsApp</a>
+                            <a href="tel:+918765432109" style="flex: 1; padding: 1rem; background: #007bff; color: white; text-decoration: none; border-radius: 12px; text-align: center;">Call</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background: #222; color: white; padding: 40px 0; text-align: center;">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 0 2rem;">
+            <h3 style="color: #FF6B6B; margin-bottom: 1rem;">KS INNOVATIONS</h3>
+            <p>Freelancers upload profiles • Influencers hire instantly</p>
+            <div style="margin-top: 1rem;">
+                <a href="https://wa.me/919390309485" style="color: #25D366; font-size: 1.5rem; margin: 0 1rem;" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                <a href="tel:+919390309485" style="color: white; font-size: 1.5rem; margin: 0 1rem;"><i class="fas fa-phone"></i></a>
+            </div>
+            <div
